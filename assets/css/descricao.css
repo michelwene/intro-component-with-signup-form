@@ -1,0 +1,24 @@
+.descricao {
+  color: white;
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  margin-top: 250px;
+  margin-right: 2.5rem;
+  width: 400px;
+}
+
+.descricao__titulo {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.descricao__texto {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}

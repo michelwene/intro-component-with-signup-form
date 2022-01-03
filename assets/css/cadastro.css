@@ -1,0 +1,89 @@
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    height: 300px;
+    width: 500px;
+}
+
+.cadastro__preencherFormulario{
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro__botao{
+    background-color: var(--cor-azul);
+    border: 0 none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 50px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.formulario{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.formulario__conteudo{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario__input{
+    border-color: var(--cor-azul-acizentado);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    height: 50px;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    width:calc(100% - 5rem);
+}
+
+.formulario__input:nth-child(1){
+    margin-top: 2rem;
+}
+
+.formulario__input:nth-child(4){
+    margin-bottom: 1rem;
+}
+
+.formulario__prosseguir{
+    background-color: var(--cor-verde);
+    border: 0 none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+    margin-bottom: 1rem;
+    width:calc(100% - 3rem);
+}
+
+.formulario__prosseguir:hover{
+    cursor: pointer;
+    opacity: 0.50;
+}
+
+.formulario__contrato{
+    color: var(--cor-azul-acizentado);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.formulario__contrato--link{
+    color: var(--cor-vermelho);
+    font-weight: 600;
+    text-decoration: none;
+}

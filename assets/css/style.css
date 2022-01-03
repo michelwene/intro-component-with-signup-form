@@ -1,0 +1,15 @@
+:root {
+  --cor-vermelho: hsl(0, 100%, 74%);
+  --cor-verde: hsl(154, 59%, 51%);
+  --cor-azul: hsl(248, 32%, 49%);
+  --cor-azul-escuro: hsl(249, 10%, 26%);
+  --cor-azul-acizentado: hsl(246, 25%, 77%);
+}
+
+.app {
+  background-color: var(--cor-vermelho);
+  background-image: url(../images/bg-intro-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
