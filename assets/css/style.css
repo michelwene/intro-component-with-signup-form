@@ -6,6 +6,10 @@
   --cor-azul-acizentado: hsl(246, 25%, 77%);
 }
 
+html{
+  margin: auto;
+}
+
 .app {
   background-color: var(--cor-vermelho);
   background-image: url(../images/bg-intro-desktop.png);
