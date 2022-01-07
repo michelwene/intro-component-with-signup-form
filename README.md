@@ -37,12 +37,12 @@ Os usuários devem ser capazes de:
 
 - Tablet
 <p  align="center" >
-<img src="assets/images/tablet.png"alt="Imagem-Desktop"/>
+<img src="assets/images/tablet.png"alt="Imagem-Tablet"/>
 </p>
 
 - Mobile
 <p  align="center" >
-<img src="assets/images/mobile.png"alt="Imagem-Desktop"/>
+<img src="assets/images/mobile.png"alt="Imagem-mobile"/>
 </p>
 
 - Gif
@@ -52,7 +52,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- Solução URL: [https://github.com/michelwene/social-proof-section-master](https://github.com/michelwene/social-proof-section-master)
+- Solução URL: [https://github.com/michelwene/intro-component-with-signup-form](https://github.com/michelwene/intro-component-with-signup-form)
 - Site URL: [https://michelwene.github.io/social-proof-section-master/](https://michelwene.github.io/social-proof-section-master/)
 
 ## Meu processo
@@ -71,18 +71,103 @@ Os usuários devem ser capazes de:
 
 ```html
 <h1>Algum código HTML de que me orgulho</h1>
-```
+<form class="formulario__conteudo">
+              <div class="input">
+                <input
+                  type="text"
+                  name="fname"
+                  placeholder="First Name"
+                  class="formulario__input"
+                  required
+                />
+                <span class="error"></span>
+              </div>
 
-```css
+              <div class="input">
+                <input
+                  type="text"
+                  name="lname"
+                  placeholder="Last Name"
+                  class="formulario__input"
+                  required
+                />
+                <span class="error"></span>
+              </div>
 
-}
+              <div class="input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="formulario__input"
+                  placeholder="Email Address"
+                  required
+                />
+                <span class="error"></span>
+              </div>
 
+              <div class="input">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder=" Password"
+                  class="formulario__input"
+                  required
+                />
+                <span class="error"></span>
+              </div>
 
+              <div class="input">
+                <button type="submit" class="formulario__prosseguir">
+                  CLAIM YOUR FREE TRIAL
+                </button>
+              </div>
+            </form>
 
+<!-- Neste HTML estruturei de uma forma em que eu consegui nomear as tags e separar os inputs da melhor forma que eu achei para realizar as funções no JavaScript, com ele bem estruturado, consegui montar o JavaScript e o CSS bem rápido.-->
 ```
 
 ```javaScript
+function customMessage(typeError) {
+    const messages = {
+      fname: {
+        valueMissing: "First name cannot be empty",
+      },
+      lname: {
+        valueMissing: "Last name cannot be empty",
+      },
+      email: {
+        valueMissing: "Looks like this is not an email",
+        typeMismatch: "email@example/com",
+      },
+      password: {
+        valueMissing: "Password cannot be empty",
+      },
+    };
 
+    return messages[field.name][typeError];
+  }
+/* função magnifica que utilizei para realizar a troca da mensagem do campo required de cada input, ou seja, cada input ficou com mensagem de required diferente.*/
+
+  function setCustomMessage(message) {
+    const spanError = field.parentNode.querySelector("span.error");
+    const inputEmail = document.getElementById("email");
+
+    if (message) {
+      spanError.classList.add("active");
+      spanError.innerHTML = message;
+
+      if (message == "Looks like this is not an email") {
+        inputEmail.placeholder= "email@example/com";
+        field.style.placeholder = "var(--cor-vermelho)";
+      }
+    } else {
+      spanError.classList.remove("active");
+      spanError.innerHTML = "";
+    }
+  }
+
+  /*Neste função também foi uma experiência gigantesca, consegui fazer com que os campos verificassem os erros e se ele estivesse com erro ou não ele tomaria medidas diferentes de acordo com o valor atual do input*/
 ```
 
 ### Continuação dos desenvolvimentos
@@ -91,7 +176,8 @@ Pretendo continuar fazendo projetos do FrontendMentor, para melhorar meu HTML, C
 
 ### Recursos utilizados
 
-- [CSS tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - Como o Grid era uma novidade para mim, este site me auxiliou na hora de aplicar o CSS Grid no projeto.
+- [Stackoverflow](https://stackoverflow.com/) - Este site me ajudou muito na realização as funções do javascript.
+- [Github](https://gist.github.com/maykbrito/951c41c1ecd87ccfcff443a38e79712f) - Este repositório foi a minha principal ajuda para realização deste projeto, nele eu consegui realizar as funções e as tratativas de acordo com meu projeto, tendo como base este repositório do Github.
 
 ## Autor
 
