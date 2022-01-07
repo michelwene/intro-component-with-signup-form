@@ -53,7 +53,7 @@ Os usuários devem ser capazes de:
 ### Links
 
 - Solução URL: [https://github.com/michelwene/intro-component-with-signup-form](https://github.com/michelwene/intro-component-with-signup-form)
-- Site URL: [https://michelwene.github.io/social-proof-section-master/](https://michelwene.github.io/social-proof-section-master/)
+- Site URL: [https://michelwene.github.io/intro-component-with-signup-form/](https://michelwene.github.io/intro-component-with-signup-form/)
 
 ## Meu processo
 
