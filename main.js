@@ -17,27 +17,36 @@ function ValidateField(field) {
 
   function customMessage(typeError) {
     const messages = {
-      text: {
-        valueMissing: "Name cannot be empty",
+      fname: {
+        valueMissing: "First name cannot be empty",
+      },
+      lname: {
+        valueMissing: "Last name cannot be empty",
       },
       email: {
         valueMissing: "Looks like this is not an email",
-        typeMismatch: "Please fill in a valid email 'email@example/com'",
+        typeMismatch: "email@example/com",
       },
       password: {
         valueMissing: "Password cannot be empty",
       },
     };
 
-    return messages[field.type][typeError];
+    return messages[field.name][typeError];
   }
 
   function setCustomMessage(message) {
     const spanError = field.parentNode.querySelector("span.error");
+    const inputEmail = document.getElementById("email");
 
     if (message) {
       spanError.classList.add("active");
       spanError.innerHTML = message;
+
+      if (message == "Looks like this is not an email") {
+        inputEmail.placeholder= "email@example/com";
+        field.style.placeholder = "var(--cor-vermelho)";
+      }
     } else {
       spanError.classList.remove("active");
       spanError.innerHTML = "";
@@ -64,8 +73,6 @@ function ValidateField(field) {
 function customValidation(event) {
   const field = event.target;
   const validation = ValidateField(field);
-
-  console.log(field.validity);
   validation();
 }
 
