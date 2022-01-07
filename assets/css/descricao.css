@@ -24,3 +24,22 @@
   line-height: 1.5;
   text-align: left;
 }
+
+@media screen and (max-width: 768px){
+
+  .descricao{
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    width: calc(100vw - 3rem);
+  }
+
+
+  .descricao__titulo{
+    font-size: 30px;
+  }
+
+  .descricao__texto{
+    text-align: center;
+  }
+}

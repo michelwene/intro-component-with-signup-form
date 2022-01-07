@@ -3,3 +3,10 @@
   justify-content: center;
   
 }
+
+@media screen and (max-width: 768px){
+  .conteudo{
+    display: flex;
+    flex-direction: column;
+  }
+}

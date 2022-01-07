@@ -6,7 +6,9 @@
   --cor-azul-acizentado: hsl(246, 25%, 77%);
 }
 
-html{
+html {
+  width: 1440px;
+  height: 800px;
   margin: auto;
 }
 
@@ -16,4 +18,18 @@ html{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    width: auto;
+    height: auto;
+  }
+
+  .app {
+    background-image: url(../images/bg-intro-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
