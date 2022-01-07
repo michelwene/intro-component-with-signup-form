@@ -168,6 +168,24 @@ function customMessage(typeError) {
   }
 
   /*Neste função também foi uma experiência gigantesca, consegui fazer com que os campos verificassem os erros e se ele estivesse com erro ou não ele tomaria medidas diferentes de acordo com o valor atual do input*/
+  
+  return function () {
+    const error = verifyErrors();
+
+    if (error) {
+      const message = customMessage(error);
+      field.style.background =
+        "#fff url(../assets/images/icon-error.svg) no-repeat 95% center";
+      field.style.border = "2px solid var(--cor-vermelho)";
+      setCustomMessage(message);
+    } else {
+      field.style.background = "none";
+      field.style.border = "2px solid var(--cor-verde)";
+      setCustomMessage();
+    }
+  };
+  
+  /*Nesta outra função podemos observar o retorno da mensagem de erro personalizada em cada campo dos inputs, e também a integração do css inline no JavaScript, onde utilizei para estilizar os campos que deram erro (Não foram preenchidos).*/
 ```
 
 ### Continuação dos desenvolvimentos
