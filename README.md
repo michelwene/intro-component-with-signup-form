@@ -1,4 +1,4 @@
-# Frontend Mentor - Social proof section
+# Frontend Mentor - Intro component with signup
 
 Esta é uma solução para o [Intro component with signup](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação ao construir projetos realistas.
 
